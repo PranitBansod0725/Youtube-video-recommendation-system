@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Recommendation System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎥 YouTube Video Recommendation System</h1>
+    <p>Choose your category in search box </p>
+
+    <form method="POST">
+        <input type="text" name="video" placeholder="Search category like gaming, music..." required>
+        <button type="submit">Recommend</button>
+    </form>
+
+    <div class="results">
+        <h2>Recommended Results:</h2>
+
+        <ul>
+            {% for item in data %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
